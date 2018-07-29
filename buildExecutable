@@ -1,0 +1,6 @@
+cd /
+cd /home/vagrant/dockerdemo
+docker stop helloworld
+docker rm helloworld
+docker build -t hello-world /home/vagrant/dockerdemo/
+docker run -d --name helloworld -p 80:80 -v /home/vagrant/dockerdemo/src/:/var/www/html hello-world
